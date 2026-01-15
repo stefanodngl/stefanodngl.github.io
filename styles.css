@@ -1,7 +1,8 @@
 body {
   font-family: Arial;
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  background-color: coral;
 }
 
 h1, h2, h3 {
