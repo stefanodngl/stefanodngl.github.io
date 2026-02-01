@@ -1,0 +1,98 @@
+/* Reset default browser margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes sizing more predictable */
+}
+
+/* Overall page font and background */
+body {
+    font-family: Georgia, "Times New Roman", serif; /* Academic-style font */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Main layout container */
+.container {
+    display: flex; /* Places sidebar and content side-by-side */
+    max-width: 1000px; /* Limits page width */
+    margin: 40px auto; /* Centers page horizontally */
+    padding: 0 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px; /* Fixed sidebar width */
+    margin-right: 40px; /* Space between sidebar and content */
+}
+
+/* Name/title in sidebar */
+.site-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Menu list styling */
+.menu {
+    list-style: none; /* Removes bullets */
+}
+
+/* Each menu item */
+.menu li {
+    margin-bottom: 10px;
+}
+
+/* Menu links */
+.menu a {
+    text-decoration: none; /* Removes underline */
+    color: #000000;
+    font-size: 16px;
+}
+
+/* Hover effect on menu */
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Active page link */
+.menu a.active {
+    font-weight: bold;
+}
+
+/* Main content area */
+.content {
+    flex: 1; /* Takes remaining space */
+}
+
+/* Section headings */
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph spacing */
+.content p {
+    margin-bottom: 15px;
+}
+
+/* Links inside content */
+.content a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 700px) {
+
+    /* Stack sidebar above content */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Sidebar full width on mobile */
+    .sidebar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
