@@ -1,98 +1,104 @@
-/* Reset default browser margin and padding */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes sizing more predictable */
+    box-sizing: border-box;
 }
 
-/* Overall page font and background */
+/* Typography */
 body {
-    font-family: Georgia, "Times New Roman", serif; /* Academic-style font */
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
-    line-height: 1.6; /* Improves readability */
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
 }
 
-/* Main layout container */
-.container {
-    display: flex; /* Places sidebar and content side-by-side */
-    max-width: 1000px; /* Limits page width */
-    margin: 40px auto; /* Centers page horizontally */
-    padding: 0 20px;
+/* Page layout */
+.page {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
 }
 
-/* Sidebar styling */
+/* Main content */
+.content {
+    width: 700px;
+}
+
+/* Title */
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* About layout */
+.about {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Profile image */
+.about img {
+    width: 220px;
+    margin-right: 30px;
+}
+
+/* Text spacing */
+.text p {
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: #1a4fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar */
 .sidebar {
-    width: 200px; /* Fixed sidebar width */
-    margin-right: 40px; /* Space between sidebar and content */
+    width: 200px;
+    margin-left: 60px;
 }
 
-/* Name/title in sidebar */
-.site-title {
+/* Name */
+.sidebar h1 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-/* Menu list styling */
-.menu {
-    list-style: none; /* Removes bullets */
+/* Menu */
+.sidebar nav a {
+    display: block;
+    margin-bottom: 12px;
+    color: #000;
 }
 
-/* Each menu item */
-.menu li {
-    margin-bottom: 10px;
-}
-
-/* Menu links */
-.menu a {
-    text-decoration: none; /* Removes underline */
-    color: #000000;
-    font-size: 16px;
-}
-
-/* Hover effect on menu */
-.menu a:hover {
-    text-decoration: underline;
-}
-
-/* Active page link */
-.menu a.active {
+/* Active page */
+.sidebar nav a.active {
     font-weight: bold;
 }
 
-/* Main content area */
-.content {
-    flex: 1; /* Takes remaining space */
-}
-
-/* Section headings */
-.content h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-/* Paragraph spacing */
-.content p {
-    margin-bottom: 15px;
-}
-
-/* Links inside content */
-.content a {
-    color: #000000;
-    text-decoration: underline;
-}
-
-/* Responsive layout for small screens */
-@media (max-width: 700px) {
-
-    /* Stack sidebar above content */
-    .container {
+/* Mobile */
+@media (max-width: 900px) {
+    .page {
         flex-direction: column;
     }
 
-    /* Sidebar full width on mobile */
     .sidebar {
-        width: 100%;
-        margin-bottom: 30px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about img {
+        margin-bottom: 20px;
     }
 }
