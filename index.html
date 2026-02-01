@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Defines character encoding -->
+    <!-- Character encoding -->
     <meta charset="UTF-8">
 
-    <!-- Makes the site responsive on mobile devices -->
+    <!-- Responsive scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title shown in browser tab -->
+    <!-- Browser tab title -->
     <title>Your Name</title>
 
-    <!-- Links the external CSS file -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Main container holding sidebar and content -->
-    <div class="container">
+<!-- Main page container -->
+<div class="page">
 
-        <!-- LEFT SIDEBAR NAVIGATION -->
-        <nav class="sidebar">
-            <!-- Your name / site title -->
-            <h1 class="site-title">Your Name</h1>
+    <!-- CONTENT COLUMN -->
+    <main class="content">
 
-            <!-- Navigation menu -->
-            <ul class="menu">
-                <!-- Active page -->
-                <li><a href="#" class="active">About</a></li>
+        <!-- Page heading -->
+        <h2>About</h2>
 
-                <!-- Placeholder links (not created yet) -->
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">CV</a></li>
-            </ul>
-        </nav>
+        <!-- About layout -->
+        <div class="about">
 
-        <!-- MAIN CONTENT AREA -->
-        <main class="content">
+            <!-- Profile image -->
+            <img src="profile.jpg" alt="Profile picture" width="250" height="300">
 
-            <!-- About section -->
-            <section>
-                <h2>About</h2>
-
+            <!-- Text -->
+            <div class="text">
                 <p>
-                    I am a short description of who you are.  
-                    This section is meant to introduce yourself, your research,
-                    interests, or professional focus.
+                    I am a short description of who you are. This section is meant
+                    to introduce yourself, your research interests, or professional
+                    focus.
                 </p>
 
                 <p>
-                    You can add multiple paragraphs here.  
-                    This layout is intentionally simple and readable.
+                    You can write multiple paragraphs here. The layout follows
+                    a traditional academic homepage style.
                 </p>
 
                 <p>
                     Email: <a href="mailto:your@email.com">your@email.com</a><br>
-                    GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a>
+                    GitHub: <a href="https://github.com/yourusername">yourusername</a>
                 </p>
-            </section>
+            </div>
 
-        </main>
-    </div>
+        </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar">
+        <h1>Your Name</h1>
+
+        <nav>
+            <a class="active" href="#">About</a>
+            <a href="#">Publications</a>
+            <a href="#">Projects</a>
+            <a href="#">CV</a>
+        </nav>
+    </aside>
+
+</div>
 
 </body>
 </html>
