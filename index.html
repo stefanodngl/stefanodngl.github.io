@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
+    <!-- Defines character encoding -->
     <meta charset="UTF-8">
 
-    <!-- Responsive behavior -->
+    <!-- Makes the site responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page title -->
+    <!-- Title shown in browser tab -->
     <title>Your Name</title>
 
-    <!-- Link CSS file -->
+    <!-- Links the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Page wrapper -->
-<div class="wrapper">
+    <!-- Main container holding sidebar and content -->
+    <div class="container">
 
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar">
-        <!-- Name at top -->
-        <h1>Your Name</h1>
+        <!-- LEFT SIDEBAR NAVIGATION -->
+        <nav class="sidebar">
+            <!-- Your name / site title -->
+            <h1 class="site-title">Your Name</h1>
 
-        <!-- Navigation menu -->
-        <nav>
-            <a class="active" href="#">About</a>
-            <a href="#">Publications</a>
-            <a href="#">Projects</a>
-            <a href="#">CV</a>
+            <!-- Navigation menu -->
+            <ul class="menu">
+                <!-- Active page -->
+                <li><a href="#" class="active">About</a></li>
+
+                <!-- Placeholder links (not created yet) -->
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">CV</a></li>
+            </ul>
         </nav>
-    </aside>
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
+        <!-- MAIN CONTENT AREA -->
+        <main class="content">
 
-        <!-- About title -->
-        <h2>About</h2>
+            <!-- About section -->
+            <section>
+                <h2>About</h2>
 
-        <!-- Content layout -->
-        <div class="about-container">
-
-            <!-- Profile image -->
-            <img src="profile.jpg" alt="Profile picture">
-
-            <!-- Text -->
-            <div class="about-text">
                 <p>
-                    I am a short description of who you are. This section is meant
-                    to introduce yourself, your research interests, or professional
-                    focus.
+                    I am a short description of who you are.  
+                    This section is meant to introduce yourself, your research,
+                    interests, or professional focus.
                 </p>
 
                 <p>
-                    You can write multiple paragraphs here. The layout follows
-                    a traditional academic homepage style.
+                    You can add multiple paragraphs here.  
+                    This layout is intentionally simple and readable.
                 </p>
 
                 <p>
                     Email: <a href="mailto:your@email.com">your@email.com</a><br>
-                    GitHub: <a href="https://github.com/yourusername">yourusername</a>
+                    GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a>
                 </p>
-            </div>
+            </section>
 
-        </div>
-
-    </main>
-
-</div>
+        </main>
+    </div>
 
 </body>
 </html>
