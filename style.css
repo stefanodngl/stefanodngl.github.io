@@ -16,7 +16,7 @@ body {
 
 /* Page layout */
 .page {
-    max-width: 1100px;
+    max-width: 960px;
     margin: 40px auto;
     display: flex;
 }
@@ -81,6 +81,17 @@ a:hover {
 /* Active page */
 .sidebar nav a.active {
     font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;    
 }
 
 /* Mobile */
