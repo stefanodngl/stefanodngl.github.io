@@ -27,7 +27,7 @@ body {
 
 /* Main content */
 .content {
-    width: 720px;
+    width: 75vh;
 }
 
 /* Title */
@@ -45,8 +45,9 @@ body {
 
 /* Profile image */
 .about img {
-    width: 200px;
-    margin-right: 20px;
+    width: 20vmin;
+    height: 20vmin; 
+    margin-right: 2vh;
 }
 
 /* Contacts layout */
@@ -77,14 +78,22 @@ body {
     margin-left: 28px;
 }
 
+
+/* Text */
+
+.text {
+    width: 50vmin;
+    height: 20vmin;
+    
+}
 /* Text spacing */
 .text p {
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 
 /* Links */
 a {
-    color: #1a4fff;
+    color: #6b208a;
     text-decoration: none;
 }
 
@@ -94,8 +103,8 @@ a:hover {
 
 /* Sidebar */
 .sidebar {
-    width: 200px;
-    margin-left: 60px;
+    width: 20vmin;
+    margin-left: 2em;
 }
 
 /* Name */
