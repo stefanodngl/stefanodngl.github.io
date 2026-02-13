@@ -1,63 +1,40 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Typography */
+/* typography */
 body {
     font-family: Helvetica, "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.5;
     color: #000;
     background: #ffffff;
-    border: 2px solid #F5F5F5;
     height: auto;
-    margin: 20px 20px 20px 20px;
 }
 
-
-/* Page layout */
-.page {
-    max-width: 960px;
-    margin: 40px auto;
+/* about */
+.main {
+    padding: 16px;
+    height: 100%;
     display: flex;
 }
 
-/* Main content */
-.content {
-    width: 75vh;
+/* profile pic */
+.main img {
+    width: 30vmin;
+    height: 40vmin; 
 }
 
-/* Title */
-.content h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-/* About layout */
-.about {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 10px;
-}
-
-/* Profile image */
-.about img {
-    width: 20vmin;
-    height: 20vmin; 
-    margin-right: 2vh;
-}
-
-/* Contacts layout */
+/* contacts */
 .contacts {
     display: flex;
     align-items: flex-start;
     margin-top: 10px;
 }
 
-/* Profile image */
+/* contacts images */
 .contacts img {
     width: 28px;
     margin-right: 20px;
@@ -79,19 +56,19 @@ body {
 }
 
 
-/* Text */
-
+/* text */
 .text {
-    width: 50vmin;
-    height: 20vmin;
-    
-}
-/* Text spacing */
-.text p {
-    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+    margin-left: 1em;
 }
 
-/* Links */
+/* text spacing */
+.text p {
+    margin-bottom: .8em;
+}
+
+/* links */
 a {
     color: #6b208a;
     text-decoration: none;
@@ -101,63 +78,78 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 20vmin;
-    margin-left: 2em;
+/* navbar */
+.navbar {
+    border-bottom: 0.3vh solid #3c3c3c;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    background-color: #3c3c3c;
 }
 
-/* Name */
-.sidebar h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    height: 60px
+.navbar a {
+    display: flex;
+    color: #bebebe;
+    height: 60px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Menu */
-.sidebar nav a {
-    display: block;
-    margin-bottom: 12px;
-    color: #000;
+.navbar a:hover {
+    background-color: #4f4f4f;
+    color: #bebebe;
 }
 
-/* Active page */
-.sidebar nav a.active {
+.navbar a.active {
+    background-color: #4f4f4f;
+    color: #ffffff;
     font-weight: bold;
 }
 
+
 /* Footer */
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #D8D8D8;
-  color: #F5F5F5;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  font-weight: 100;
-  font-size: larger;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #D8D8D8;
+    color: #F5F5F5;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 100;
+    font-size: larger;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-    .page {
+/* mobile */
+@media screen and (max-width: 800px) {
+    .main {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
         flex-direction: column;
     }
 
-    .sidebar {
+    .text {
+        width: 100%;
+        height: 100%;
         margin-left: 0;
-        margin-top: 40px;
+        margin-top: 16px;
     }
 
-    .about {
-        flex-direction: column;
+    .main img {
+        margin: auto;
+        min-width: 300px;
     }
-
-    .about img {
-        margin-bottom: 20px;
+    
+    .navbar {
+        border-bottom: 0.3vh solid #3c3c3c;
+        list-style: none;
+        display: flex;
+        justify-content: center;  
+        gap: 0;
+        background-color: #3c3c3c;
     }
 }
