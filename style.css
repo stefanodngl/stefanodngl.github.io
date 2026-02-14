@@ -17,6 +17,8 @@ body {
 /* about */
 .main {
     padding: 16px;
+    padding-left: 150px;
+    padding-right: 150px;
     height: 100%;
     display: flex;
 }
@@ -24,43 +26,58 @@ body {
 /* profile pic */
 .main img {
     width: 30vmin;
-    height: 40vmin; 
+    height: 40vmin;
+    margin-right: 1em;
 }
 
 /* contacts */
-.contacts {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 10px;
+.main_contacts {
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+.main_contacts_text p {
+    margin-bottom: 2em;
 }
 
 /* contacts images */
 .contacts img {
     width: 28px;
-    margin-right: 20px;
 }
 
 /* cv layout */
 .cvheading {
-    font-size: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border-bottom: #3c3c3c solid 0.12em;
 }
 
 /* cv layout */
 .cv {
-    display: flex;
     align-items: flex-start;
     margin-top: 10px;
     margin-left: 28px;
+    display : block;
 }
 
+.main_cv {
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 100%;
+    display: block;
+}
 
 /* text */
 .text {
     width: 100%;
     height: 100%;
-    margin-left: 1em;
 }
 
 /* text spacing */
@@ -99,7 +116,8 @@ a:hover {
 
 .navbar a:hover {
     background-color: #4f4f4f;
-    color: #bebebe;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .navbar a.active {
@@ -122,7 +140,7 @@ a:hover {
     justify-content:center;
     align-items:center;
     font-weight: 100;
-    font-size: larger;
+    font-size: 20px;
 }
 
 /* mobile */
@@ -130,8 +148,19 @@ a:hover {
     .main {
         width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
         flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+
     }
 
+    .main_cv {
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 100%;
+        display: block;
+    }
+    
     .text {
         width: 100%;
         height: 100%;
@@ -152,4 +181,9 @@ a:hover {
         gap: 0;
         background-color: #3c3c3c;
     }
+    
+    .footer {
+    height: 40px;
+    font-size: 18px;
+}
 }
