@@ -51,6 +51,35 @@ body {
     margin-top: 2em;
 }
 
+/* projects */
+.main_projects {
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+.projects {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10em;     
+    margin: 3em;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.main_projects_text p {
+    padding-bottom: 1em;
+}
+
+/* projects images */
+.projects img {
+    width: auto;
+    margin-top: 1em;
+}
+
 /* cv layout */
 .cvheading {
     display: flex;
