@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>Savings Yield Comparator</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>deposit_simulator</h1>
+
+<div class="navButtons">
+
+<a href="https://stefanodngl.github.io">about</a>
+
+<a href="how_to_use.html">how to use</a>
+    
+<a href="methodology.html">methodology</a>
+    
+</div>
+
+</header>
+
+<main>
+
+<div class="controls">
+
+<div class="controlSection">
+
+<div class="sectionTitle">
+deposit amount
+</div>
+
+<input
+    id="amount"
+    class="amountInput"
+    type="number"
+    value="50000"
+    min="1"
+    placeholder="Enter deposit amount"
+/>
+
+</div>
+
+<div class="controlSection">
+
+<div class="sectionTitle">
+select periods
+</div>
+
+<div class="periods">
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="6" checked>
+6 months
+</label>
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="12" checked>
+1 year
+</label>
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="24" checked>
+2 years
+</label>
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="36" checked>
+3 years
+</label>
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="48" checked>
+4 years
+</label>
+
+<label class="period">
+<input class="period-checkbox" type="checkbox" value="60" checked>
+5 years
+</label>
+
+</div>
+
+</div>
+
+<div class="controlSection">
+
+<div class="sectionTitle">
+select banks (up to 5)
+</div>
+
+<select
+    id="bankSelector"
+    multiple
+    size="8">
+</select>
+``
+
+</div>
+
+</div>
+
+<div class="chartCard">
+
+<div class="chartLabel">
+Net yield (€)
+</div>
+
+<div class="chartContainer">
+
+<canvas id="yieldChart"></canvas>
+
+</div>
+
+</div>
+
+<div class="lastUpdate">
+
+Deposit rates last update:
+10/05/2026
+
+</div>
+
+</main>
+
+<footer>
+
+© Stefano D'Angelo
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+        
+</body>
+</html>
