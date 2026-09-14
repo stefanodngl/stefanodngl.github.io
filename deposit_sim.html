@@ -1,12 +1,172 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Deposit Simulator</title><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body>
-<header><h1>Deposit Comparator</h1><nav><a href="https://stefanodngl.github.io">about</a><a href="how-to-use.html">how to use</a><a href="methodology.html">methodology</a></nav></header>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Deposit Comparator</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+
+<header>
+
+    <h1>Deposit Comparator</h1>
+
+    <nav>
+
+        <a href="https://stefanodngl.github.io">
+            about
+        </a>
+
+        <a href="https://stefanodngl.github.io"> how to use
+        </a>
+
+        <a href="https://stefanodngl.github.io"> methodology
+        </a>
+
+    </nav>
+
+</header>
+
 <main>
-<div class="controls">
-<div><label>Deposit amount (€)</label><input id="amount" type="number" value="50000"></div>
-<div><label>Periods</label><div class="periods"><label><input class="period-checkbox" type="checkbox" value="6" checked>6m</label><label><input class="period-checkbox" type="checkbox" value="12" checked>1y</label><label><input class="period-checkbox" type="checkbox" value="24" checked>2y</label><label><input class="period-checkbox" type="checkbox" value="36" checked>3y</label><label><input class="period-checkbox" type="checkbox" value="48" checked>4y</label><label><input class="period-checkbox" type="checkbox" value="60" checked>5y</label></div></div>
-<div><label>Search bank</label><input id="bankSearch" type="text" placeholder="Search..."><div id="chips"></div><select id="bankSelector" multiple size="8"></select></div>
-</div>
-<div class="chartCard"><canvas id="yieldChart"></canvas></div>
-<div class="update">Deposit rates last update: 10/05/2026</div>
-</main><footer>© Stefano D'Angelo</footer><script src="app.js"></script></body></html>
+
+    <section class="controls">
+
+        <div class="control-block">
+
+            <label>
+                Deposit Amount (€)
+            </label>
+
+            <input
+                type="number"
+                id="amount"
+                value="50000">
+
+        </div>
+
+        <div class="control-block">
+
+            <label>Periods</label>
+
+            <div class="periods">
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="6"
+                        checked>
+                    6m
+                </label>
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="12"
+                        checked>
+                    1y
+                </label>
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="24"
+                        checked>
+                    2y
+                </label>
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="36"
+                        checked>
+                    3y
+                </label>
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="48"
+                        checked>
+                    4y
+                </label>
+
+                <label>
+                    <input
+                        class="period-checkbox"
+                        type="checkbox"
+                        value="60"
+                        checked>
+                    5y
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="control-block">
+
+            <label>
+                Search Bank
+            </label>
+
+            <input
+                type="text"
+                id="bankSearch"
+                placeholder="Search bank...">
+
+            <div id="selectedBanks"></div>
+
+            <select
+                id="bankSelector"
+                multiple
+                size="8">
+            </select>
+
+        </div>
+
+    </section>
+
+    <section class="chart-card">
+
+        <canvas id="yieldChart"></canvas>
+
+    </section>
+
+    <div class="update-date">
+
+        Deposit rates last update: 10/05/2026
+
+    </div>
+
+</main>
+
+<footer>
+
+    © Stefano D'Angelo
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
