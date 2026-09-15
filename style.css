@@ -66,8 +66,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10em;     
     margin: 3em;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .main_projects_text p {
@@ -216,6 +216,35 @@ a:hover {
         background-color: #3c3c3c;
     }
     
+        /* projects */
+    .main_projects {
+        padding: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .projects {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10em;     
+        margin: 3em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main_projects_text p {
+        padding-bottom: 1em;
+    }
+
+    /* projects images */
+    .projects img {
+        width: auto;
+        margin-top: 1em;
+    }
+    
     .footer {
     height: 40px;
     font-size: 18px;
@@ -261,6 +290,35 @@ a:hover {
         justify-content: center;  
         gap: 0;
         background-color: #3c3c3c;
+    }
+
+            /* projects */
+    .main_projects {
+        padding: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 25px;
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .projects {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10em;     
+        margin: 3em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main_projects_text p {
+        padding-bottom: 1em;
+    }
+
+    /* projects images */
+    .projects img {
+        width: auto;
+        margin-top: 1em;
     }
     
     .footer {
