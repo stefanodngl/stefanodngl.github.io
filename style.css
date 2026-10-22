@@ -343,8 +343,8 @@ a:hover {
     .main {
         width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
         flex-direction: row;
-        padding-left: 15em;
-        padding-right: 15em;
+        padding-left: 20em;
+        padding-right: 20em;
     }
 
     .main img {
