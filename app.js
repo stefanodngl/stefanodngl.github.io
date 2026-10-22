@@ -1,11 +1,11 @@
 const CSV_URL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vTbo6T11RGrSySTB1SIUQo1P944lSOqHMNJHVG98PLV7XmNEweXabN8oQA_H_Miqw/pub?gid=1536666859&single=true&output=csv";
-const COLORS = [
-    "#8FD694",
-    "#7DBA84",
-    "#77AD78",
-    "#6F8F72",
-    "#504B43"
+const COLORS = [ // bars color
+    "#A682FF",
+    "#715AFF",
+    "#5887FF",
+    "#55C1FF",
+    "#03254E"
 ];
 
 let bankData = [];
@@ -36,7 +36,7 @@ function parseCSV(text) {
         }
         else if (
             (char === '\n' || char === '\r')
-            &&
+            &
             !inQuotes
         ) {
 
@@ -82,8 +82,7 @@ function parseCSV(text) {
             headers.forEach((header,index)=>{
 
                 obj[header] =
-                    values[index]
-                    ? values[index].trim()
+                    values[index] ? values[index].trim()
                     : "";
 
             });
@@ -172,9 +171,7 @@ function getRate(bank, months) {
     const rate =
         parseFloat(value);
 
-    return isNaN(rate)
-        ? 0
-        : rate / 100;
+    return isNaN(rate) ? 0: rate / 100;
 }
 
 
@@ -235,6 +232,46 @@ function calculateYield(
 
 }
 
+function validateDepositAmount(
+    bank,
+    amount
+){
+
+    const min =
+        bank.deposit_min &&
+        bank.deposit_min !== "" ? Number(bank.deposit_min)
+        : 0;
+
+    const max =
+        bank.deposit_max &&
+        bank.deposit_max !== "" ? Number(bank.deposit_max)
+        : Infinity;
+
+    if(amount < min){
+
+        alert(
+            bank.bank +
+            " does not allow an amount lower than " +
+            min
+        );
+
+        return false;
+    }
+
+    if(amount > max){
+
+        alert(
+            bank.bank +
+            " does not allow an amount higher than " +
+            max
+        );
+
+        return false;
+    }
+
+    return true;
+}
+
 function updateChart() {
 
     const amount =
@@ -243,7 +280,7 @@ function updateChart() {
             .getElementById(
                 "amount"
             )
-            .value || 50000
+            .value || 0
         );
 
     const periods = [
@@ -254,6 +291,26 @@ function updateChart() {
         48,
         60
     ];
+
+    const selectedPeriods =
+
+        Array
+        .from(
+
+            document.querySelectorAll(
+                ".period-checkbox:checked"
+            )
+
+        )
+
+        .map(
+
+            checkbox =>
+            Number(
+                checkbox.value
+            )
+
+        );
 
     const selectedBanks =
 
@@ -304,31 +361,68 @@ function updateChart() {
                 );
 
             if(!bank){
+                    return;
+            }
+
+            if(
+                !validateDepositAmount(
+                    bank,
+                    amount
+                )
+            ){
+
+                datasets.push({
+
+                    label:
+                        bankName,
+
+                    data:
+                        periods.map(
+                            () => 0
+                        ),
+
+                    backgroundColor:
+                        "rgba(255,255,255,0)",
+
+                    borderColor:
+                        COLORS[index],
+
+                });
+
                 return;
             }
 
             const data =
 
-                periods.map(
-                    p =>
-                    calculateYield(
+                periods.map(function(p){
+
+                    if(
+                        !selectedPeriods.includes(p)
+                    ){
+                        return null;
+                    }
+
+                    return calculateYield(
                         bank,
                         amount,
                         p
-                    )
-                );
+                    );
+
+                });
 
             datasets.push({
 
                 label:
                     bankName,
 
-                backgroundColor:
-                    COLORS[index],
-
                 data:
-                    data
+                    data,
 
+                backgroundColor:
+                    COLORS[index], // change bars border
+                borderColor: "#c6c6c6ba",
+                borderWidth: 1.1,
+                borderRadius: 8,
             });
 
         });
@@ -353,27 +447,50 @@ function updateChart() {
 
                 data:{
 
-                    labels:[
+                    labels:
 
-                        "6m",
-                        "1y",
-                        "2y",
-                        "3y",
-                        "4y",
-                        "5y"
+                        periods.map(function(period){
 
-                    ],
+                            if(period === 6){
+                                return "6 months";
+                            }
+
+                            return (
+                                period / 12
+                            ) + " year" + (period > 12 ? "s" : "");
+                        }),
 
                     datasets
 
                 },
 
                 options:{
-
                     responsive:true,
+                    maintainAspectRatio:false,
 
-                    maintainAspectRatio:false
+                    plugins:{
+                            legend:{
+                                    position:"bottom"
+                            }//,
+                            // title:{
+                            //    display:true,
+                            //    text:"Net Yield Comparison"
+                            //}
+                    },
 
+                    scales:{
+                            y:{
+                                beginAtZero:true,
+                                grid:{
+                                    color:"#e9e9e973"
+                                }
+                            },
+                            x:{
+                                grid:{
+                                    display:false
+                                }
+                            }
+                    }
                 }
 
             }

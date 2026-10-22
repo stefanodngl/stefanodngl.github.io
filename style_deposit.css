@@ -1,0 +1,553 @@
+body {
+
+    margin: 0;
+    padding: 20px;
+    font-family: Helvetica, "Arial", sans-serif;
+    color: #1f2937;
+/*    background-image: url("Designer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */    
+}
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+nav a {
+
+    text-decoration: none;
+    margin-left: 10px;
+    border: 1px solid #48833e7a;
+    color: #48833e7a;
+    padding: 8px 16px;
+    border-radius: 9px;
+
+}
+
+.controls {
+
+    display: grid;
+    grid-template-columns:
+        1fr
+        1.2fr
+        1.5fr;
+    gap: 15px;
+/*    border: 2.5px solid #ddd; */
+    border-radius: 2em;
+/*    padding: 20px; */
+}
+
+.control-block {
+
+    display: flex;
+    flex-direction: column;
+    border: solid 2.5px;
+    border-color: #48833e7a;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.description_text {
+    
+    padding-bottom: 1em;
+    text-align: left;
+    font-size: small;
+    color: #b1b1b1;
+}
+
+.control-block label {
+
+    margin-bottom: 10px;
+}
+
+#amount {
+
+    padding: 8px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#bankSearch {
+
+    padding: 0.3em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 0.7em;
+    margin-top: 0.7em;
+}
+
+#bankSelector {
+
+    width: 100%;
+    padding: 0.1em;
+    border-radius: 0.3em;
+    border: 1px solid #ccc;
+    min-height: 100px;
+}
+
+.periods {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chart-card {
+
+    margin-top: 20px;
+    border: 2.5px solid #ddd;
+    border-radius: 18px;
+    padding: 20px;
+    height: 600px;
+}
+
+.update-date {
+
+    text-align: center;
+    margin-top: 20px;
+    color: #48833e7a;
+}
+
+footer {
+
+    text-align: center;
+    margin-top: 20px;
+}
+
+#selectedBanks {
+
+    margin-bottom: 3%;
+}
+
+.chip {
+
+    display: inline-block;
+    background: #48833e7a;
+    color: #ffffff;
+    font-size: small;
+    padding: 1% 4%;
+    border-radius: 10px;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+
+.bankLabel{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.infoIcon {
+
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border-radius: 75%;
+    background: #48833e7a;
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    font-weight: b;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.tooltipText {
+
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    padding: 10px;
+    background: white;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.infoIcon:hover .tooltipText {
+
+    display: block;
+
+}
+
+
+
+/* mobile */
+@media screen and (min-width: 300px) {
+    body {
+        
+        padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+    }
+
+    .controls {
+
+        display: block;
+        grid-template-columns:
+            1fr
+            1.2fr
+            1.5fr;
+        gap: 15px;
+    /*    border: 2.5px solid #ddd; */
+        border-radius: 2em;
+        padding-left: 25px;
+        padding-right: 25px;
+    }    
+
+    header {
+        
+        font-size: smaller;
+    }
+    
+    nav a {
+
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #48833e7a;
+        color: #48833e7a;
+        padding: 5px;
+        border-radius: 999px;
+        margin: 10px;
+        margin-right: 35px;
+        font-size: medium;
+    }
+    
+    .control-block {
+
+        display: flex;
+        flex-direction: column;
+        border: solid 2.5px;
+        border-color: #48833e7a;
+        border-radius: 10px;
+        padding: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .infoIcon {
+
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border-radius: 75%;
+        background: #1700ffff;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75em;
+        font-weight: b;
+        cursor: pointer;
+        overflow: visible;
+    }
+    
+    .footer {
+    height: 40px;
+    font-size: 18px;
+}
+}
+
+
+/* big mobile, tablet */
+@media screen and (min-width: 600px) {
+    
+    body {
+        
+        padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+    }
+
+    header {
+        
+        font-size: large;
+    }
+    
+    nav a {
+
+    
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 10px;
+        border: 1px solid #48833e7a;
+        color: #48833e7a;
+        padding: 8px;
+        border-radius: 999px;
+        font-size: large;
+        margin-right: 2em;
+    }
+
+    .controls {
+
+        display: block;
+        grid-template-columns:
+            1fr
+            1.2fr
+            1.5fr;
+        gap: 15px;
+    /*    border: 2.5px solid #ddd; */
+        border-radius: 2em;
+        padding-left: 25px;
+        padding-right: 25px;
+    }    
+
+    .control-block {
+
+        display: flex;
+        flex-direction: column;
+        border: solid 2.5px;
+        border-color: #48833e7a;
+        border-radius: 10px;
+        padding: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }    
+    
+    .infoIcon {
+
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border-radius: 75%;
+        background: #ff00caff;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75em;
+        font-weight: b;
+        cursor: pointer;
+        overflow: visible;
+    }
+    
+    .footer {
+    height: 40px;
+    font-size: 18px;
+}
+}
+
+
+
+/* big mobile, tablet */
+@media screen and (min-width: 800px) {
+    
+    body {
+        
+        padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+    }
+
+    .controls {
+
+        display: grid;
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+        gap: 15px;
+    /*    border: 2.5px solid #ddd; */
+        border-radius: 2em;
+    /*    padding: 20px; */
+    }
+
+    .control-block {
+
+        display: flex;
+        flex-direction: column;
+        border: solid 2.5px;
+        border-color: #48833e7a;
+        border-radius: 10px;
+        padding: 0.75em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }    
+
+    nav a {
+
+        display: inline-flex;
+        text-decoration: none;
+        border: 1px solid #48833e7a;
+        color: #48833e7a;
+        padding: 8px;
+        border-radius: 999px;
+        margin: 4px;
+        text-align: center;
+    }
+    
+    .infoIcon {
+
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border-radius: 75%;
+        background: #48833e7a;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75em;
+        font-weight: b;
+        cursor: pointer;
+        overflow: visible;
+    }
+    
+    .footer {
+    height: 40px;
+    font-size: 18px;
+}
+}
+
+
+
+/* laptop, desktop */
+@media screen and (min-width: 1000px) {
+    body {
+        
+        padding-right: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+    }
+
+    .controls {
+
+        display: grid;
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+        gap: 20px;
+    /*    border: 2.5px solid #ddd; */
+        border-radius: 2em;
+    /*    padding: 20px; */
+    }   
+    
+    header {
+        
+        font-size: larger;
+        padding-right: calc(1px + (200vw - 1400px) * (15 - 30) / (700 -  1000));
+    }
+    
+    nav a {
+
+        display: inline-flex;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #48833e7a;
+        color: #48833e7a;
+        padding: 10px;
+        border-radius: 999px;
+        font-size: large;
+        margin: 5px;
+    }
+    
+    main {
+        
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+    .infoIcon {
+
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border-radius: 75%;
+        background: #ff0000ff;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75em;
+        font-weight: b;
+        cursor: pointer;
+        overflow: visible;
+    }    
+}
+
+
+
+/* laptop, desktop */
+@media screen and (min-width: 1200px) {
+    body {
+        
+        padding-right: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+    }
+
+    .controls {
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px;
+    /*    border: 2.5px solid #ddd; */
+        border-radius: 2em;
+    /*    padding: 20px; */
+    }   
+ 
+    header {
+        
+        font-size: larger;
+    }
+    
+    nav a {
+
+        display: inline-flex;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #48833e7a;
+        color: #48833e7a;
+        padding: 15px;
+        border-radius: 999px;
+        font-size: large;
+        margin: 10px;
+    }
+    
+    main {
+        
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    header {
+
+        padding-right: calc(1px + (200vw - 1400px) * (15 - 30) / (700 -  1000));
+    }
+    
+    .infoIcon {
+
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border-radius: 75%;
+        background: #9c00ffff;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75em;
+        font-weight: b;
+        cursor: pointer;
+        overflow: visible;
+    }    
+}
