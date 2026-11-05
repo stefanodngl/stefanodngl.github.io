@@ -8,6 +8,15 @@ const COLORS = [ // bars color
     "#03254E"
 ];
 
+Chart.defaults.font.family =
+    "Segoe UI";
+
+Chart.defaults.font.size =
+    13;
+
+Chart.defaults.color =
+    "#555555";
+
 let bankData = [];
 let chart = null;
 
@@ -469,7 +478,34 @@ function updateChart() {
                     maintainAspectRatio:false,
 
                     plugins:{
-                            legend:{
+                        tooltip:{
+                            backgroundColor:"rgba(0, 0, 0, 0.75)",
+                            titleColor:"#ffffff",
+                            bodyColor:"#eaeaea",
+                            borderColor:"#d1d5db",
+                            borderWidth:1,
+
+                            callbacks:{
+
+                                label:function(context){
+
+                                    return "Net yield: €" +
+
+                                    Number(context.raw).toLocaleString(
+                                        "en-US",
+                                        {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2
+                                        }
+                                    );
+
+                                }
+
+                            }
+
+                        },
+    
+                        legend:{
                                     position:"bottom"
                             }//,
                             // title:{
@@ -483,6 +519,18 @@ function updateChart() {
                                 beginAtZero:true,
                                 grid:{
                                     color:"#e9e9e973"
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return "€" +
+                                            Number(value).toLocaleString(
+                                                "en-US",
+                                                {
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2
+                                                }
+                                            );
+                                    }
                                 }
                             },
                             x:{
@@ -537,7 +585,47 @@ document
 
 document.addEventListener(
     "change",
-    updateChart
+    function(event){
+
+        if(
+            event.target.id !==
+            "bankSelector"
+        ){
+
+            updateChart();
+
+        }
+
+    }
+);
+
+document
+.getElementById("bankSelector")
+.addEventListener(
+    "change",
+    function(){
+
+        const selected =
+
+            Array.from(
+                this.selectedOptions
+            );
+
+        if(selected.length > 5){
+
+            selected[
+                selected.length - 1
+            ].selected = false;
+
+            alert(
+                "You can select a maximum of 5 banks."
+            );
+
+        }
+
+        updateChart();
+
+    }
 );
 
 loadData();

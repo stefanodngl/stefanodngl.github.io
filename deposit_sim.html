@@ -9,7 +9,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>deposit comparator</title>
+    <title>deposit simulator</title>
 
     <link
         rel="stylesheet"
@@ -25,30 +25,59 @@
 
     <h1>Italian bank deposit</h1>
 
-    <nav>
+<nav>
 
-        <a href="https://stefanodngl.github.io">
+    <div class="hamburger" id="hamburgerBtn">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+
+        <a href="https://stefanodngl.github.io" target="_blank">
             about
         </a>
 
-        <a href="https://stefanodngl.github.io"> how to use
+        <a href="https://stefanodngl.github.io" target="_blank">
+            how to use
         </a>
 
-        <a href="https://stefanodngl.github.io"> methodology
+        <a href="https://stefanodngl.github.io" target="_blank">
+            methodology
         </a>
 
-    </nav>
+    </div>
+
+    <a href="https://stefanodngl.github.io" target="_blank">
+        about
+    </a>
+
+    <a href="https://stefanodngl.github.io" target="_blank">
+        how to use
+    </a>
+
+    <a href="https://stefanodngl.github.io" target="_blank">
+        methodology
+    </a>
+
+</nav>
+    
 
 </header>
 
+<h2>Compare Italian bank deposit accounts and returns</h2>
+    
 <main>
 
     <section class="controls">
 
-        <div class="control-block">
+        <div class="control-block-a">
 
             <label>
-                <b>Deposit amount (in EUR)</b>
+                <a>Deposit amount (in EUR)</a>
             </label>
 
             <input
@@ -58,10 +87,10 @@
 
         </div>
     
-        <div class="control-block">
+        <div class="control-block-a">
 
             <label>
-                <b>Periods (months)</b>
+                <a>Periods (months)</a>
             </label>
 
             <div class="periods">
@@ -124,12 +153,12 @@
 
         </div>
 
-        <div class="control-block">
+        <div class="control-block-b">
 
             <div class="bankLabel">
 
                 <span>
-                    <b>Search bank</b>
+                    <a>Search bank</a>
                 </span>
 
                 <div class="infoIcon">
@@ -147,9 +176,8 @@
             <input
                 type="text"
                 id="bankSearch"
-                placeholder="Search bank...">
+                placeholder="Enter bank name...">
 
-            <div id="selectedBanks"></div>
 
             <select
                 id="bankSelector"
@@ -161,6 +189,8 @@
                 
 
     </section>
+
+    <div id="selectedBanks"></div>
 
     <section class="chart-card">
 
@@ -176,11 +206,29 @@
 
 </main>
 
-<footer>
+<div class=footer>
 
     2026 &#xA9; Stefano D'Angelo
 
-</footer>
+</div>
+    
+<script>
+
+    document
+    .getElementById("hamburgerBtn")
+    .addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("mobileMenu")
+            .classList
+            .toggle("mobileMenuOpen");
+
+        }
+    );
+
+</script>
 
 <script src="app.js"></script>
 
