@@ -39,10 +39,14 @@ h2 {
     color: rgba(90, 99, 111, 0.53);
 }
 
+nav {
+    position: relative;
+}
+
+
 nav a {
 
     display: inline-block;
-    position: relative;
     text-decoration: none;
     border-radius: 999px;
     background-color: #ffffff;
@@ -62,7 +66,7 @@ nav a {
 
 .mobileMenu{
 
-    display: none; /* CHANGE TO none/block to CLOSE/OPEN MENU DURING PREVIEW */
+    display: block; /* CHANGE TO none/block to CLOSE/OPEN MENU DURING PREVIEW */
 }
 
 .controls {
@@ -331,32 +335,43 @@ nav a {
             0 1px 4px rgba(0,0,0,0.12);
     }
 
-    .mobileMenu{
+        .mobileMenu{
+            
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: fit-content;
+            background: rgba(23, 23, 23, 0.88);
+            border-radius: 0;
+            padding-left: 0.2em;
+            padding-right: 0.2em;
+            min-width: 180px;
+            z-index: 9999;
+        }
 
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: white;
-        border-radius: 14px;
-        padding: 10px;
-        min-width: 180px;
-        box-shadow:
-            0 8px 22px rgba(0,0,0,0.10);
-        z-index: 9999;
-    }
+        .mobileMenu a{
 
-    .mobileMenu a{
+            display: grid;
+            margin: 0.2em 0;
+            height: fit-content;
+            font-size: large;
+            color: #ffffff;
+            text-align: center;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            background: rgba(13, 13, 13, 0.33);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.93),
+            1em 1em 5em #6471717a;        
+        }
 
-        display:block;
-        padding:12px;
-        margin:4px 0;
-        text-align:center;
-    }
+        .mobileMenuOpen{
 
-    .mobileMenuOpen{
-
-        display:block;
-    }
+            display: block;
+        }
     
     .footer {
     height: 40px;
@@ -393,7 +408,7 @@ nav a {
 
     nav a{
 
-    display:none;
+    display: none;
 
     }
 
@@ -419,14 +434,14 @@ nav a {
 
         .mobileMenu{
             
-            position: absolute;
+            position: fixed;
             top: 0;
-            bottom: 75%;
+            bottom: 0;
             right: 0;
             left: 0;
             height: fit-content;
             background: rgba(23, 23, 23, 0.88);
-            border-radius: o;
+            border-radius: 0;
             padding-left: 0.2em;
             padding-right: 0.2em;
             min-width: 180px;
@@ -519,21 +534,18 @@ nav a {
     
     nav a {
 
-    display: inline-block;
-    
-    text-decoration: none;
-    
-    border-radius: 999px;
-    
-    background-color: #ffffff;
-    color: #1f2937;
-    padding: 8px 12px;
-    font-size: small;
-    align-content: center;
-        
-    box-shadow: 
-    0.1em 0.1em 0.25em #aa88f5;
-}
+        display: inline-block; 
+        text-decoration: none;
+        border-radius: 999px;
+        background-color: #ffffff;
+        color: #1f2937;
+        padding: 8px 12px;
+        font-size: small;
+        align-content: center;
+
+        box-shadow: 
+        0.1em 0.1em 0.25em #aa88f5;
+    }
      
     .footer {
     height: 40px;
