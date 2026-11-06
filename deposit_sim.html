@@ -214,57 +214,71 @@
     
 <script>
 
-    document
-    .getElementById("hamburgerBtn")
-    .addEventListener(
-        "click",
-        function(){
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
 
-            document
-            .getElementById("mobileMenu")
-            .classList
-            .toggle("mobileMenuOpen");
+        document
+        .getElementById("mobileMenu")
+        .classList
+        .remove("mobileMenuOpen");
 
-        }
-    );
+        document
+        .getElementById("hamburgerBtn")
+        .addEventListener(
+            "click",
+            function(event){
 
-    document.addEventListener(
-    "click",
-    function(event){
+                event.stopPropagation();
 
-            const menu =
-                document.getElementById(
-                    "mobileMenu"
-                );
-
-            const button =
-                document.getElementById(
-                    "hamburgerBtn"
-                );
-
-            if(
-
-                !menu.contains(
-                    event.target
-                )
-
-                &&
-
-                !button.contains(
-                    event.target
-                )
-
-            ){
-
-                menu.classList.remove(
-                    "mobileMenuOpen"
-                );
+                document
+                .getElementById("mobileMenu")
+                .classList
+                .toggle("mobileMenuOpen");
 
             }
+        );
 
-        }
-    );
-    
+        document.addEventListener(
+            "click",
+            function(event){
+
+                const menu =
+                    document.getElementById(
+                        "mobileMenu"
+                    );
+
+                const button =
+                    document.getElementById(
+                        "hamburgerBtn"
+                    );
+
+                if(
+
+                    !menu.contains(
+                        event.target
+                    )
+
+                    &&
+
+                    !button.contains(
+                        event.target
+                    )
+
+                ){
+
+                    menu.classList.remove(
+                        "mobileMenuOpen"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
 </script>
 
 <script src="app.js"></script>
