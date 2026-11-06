@@ -64,7 +64,7 @@ nav a {
 
 .mobileMenu{
 
-    display:block; /* CHANGE TO none/block to CLOSE/OPEN MENU DURING PREVIEW */
+    display: none; /* CHANGE TO none/block to CLOSE/OPEN MENU DURING PREVIEW */
 }
 
 .controls {
