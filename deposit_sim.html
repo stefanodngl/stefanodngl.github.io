@@ -228,6 +228,43 @@
         }
     );
 
+    document.addEventListener(
+    "click",
+    function(event){
+
+            const menu =
+                document.getElementById(
+                    "mobileMenu"
+                );
+
+            const button =
+                document.getElementById(
+                    "hamburgerBtn"
+                );
+
+            if(
+
+                !menu.contains(
+                    event.target
+                )
+
+                &&
+
+                !button.contains(
+                    event.target
+                )
+
+            ){
+
+                menu.classList.remove(
+                    "mobileMenuOpen"
+                );
+
+            }
+
+        }
+    );
+    
 </script>
 
 <script src="app.js"></script>
