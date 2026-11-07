@@ -136,6 +136,7 @@ nav a {
 
     padding: 8px;
     font-size: 18px;
+    font-family: Segoe UI, sans-serif;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -152,6 +153,7 @@ nav a {
 
     padding: 8px;
     font-size: 15px;
+    font-family: Segoe UI, sans-serif;
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-bottom: 8px;
@@ -164,6 +166,8 @@ nav a {
     border-radius: 0.3em;
     border: 1px solid #ccc;
     min-height: 100px;
+    font-size: 0.75em;
+    font-family: Segoe UI, sans-serif;
 }
 
 .periods {
@@ -172,8 +176,7 @@ nav a {
     grid-template-columns: max-content max-content max-content;
     flex-wrap: wrap;
     gap: 8px;
-    
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .chart-card {
@@ -204,7 +207,7 @@ nav a {
     bottom: 0;
     width: 100%;
     height: 40px;
-    background-color: rgba(216, 216, 216, 0.50);
+    background-color: #d8d8d880;
     color: #F5F5F5;
     display: flex;
     justify-content:center;
@@ -286,7 +289,7 @@ nav a {
 
 
 /* mobile */
-@media screen and (min-width: 0px) and (max-width: 599px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
     body {
         
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
@@ -309,6 +312,112 @@ nav a {
         cursor: pointer;
         overflow: visible;
     }
+    
+    .controls {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        margin-bottom: 15px;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    .control-block-a {
+
+        display: flex;
+        flex-direction: column;
+
+        height: 80%;
+
+        border-radius: 10px;    
+        padding: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        box-shadow: 0 0 0 2px #ffffff,
+        0.1em 0.1em 0.5em #6471717a;
+
+        background-color: #ffffff;
+    }
+
+    .control-block-b {
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 10px;    
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        box-shadow: 0 0 0 2px white,
+        0.1em 0.1em 0.5em #6471717a;
+
+        background-color: #ffffff;
+    }
+
+    .description_text {
+
+        padding-bottom: 1em;
+        text-align: left;
+        font-size: small;
+        color: #b1b1b1;
+    }
+
+    .control-block-a label {
+
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+
+    #amount {
+
+        padding: 8px;
+        width: fit-content;
+        font-size: 18px;
+        font-family: Segoe UI, sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .bankLabel {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 8px;
+        font-size: medium;
+    }
+
+    #bankSearch {
+
+        padding: 8px;
+        font-size: 15px;
+        font-family: Segoe UI, sans-serif;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 8px;
+    }
+
+    #bankSelector {
+
+        width: 100%;
+        padding: 0.1em;
+        border-radius: 0.3em;
+        border: 1px solid #ccc;
+        min-height: 100px;
+        font-size: 0.75em;
+        font-family: Segoe UI, sans-serif;
+    }
+
+    .periods {
+
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 15px;
+    }    
 
     nav a{
 
@@ -376,12 +485,13 @@ nav a {
     .footer {
     height: 40px;
     font-size: 18px;
+    font-family: Helvetica, "Arial", sans-serif;    
 }
 }
 
 
 /* big mobile, tablet */
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     
     body {
         
@@ -389,6 +499,8 @@ nav a {
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
 
+    
+    
     .infoIcon {
 
         position: relative;
@@ -406,10 +518,117 @@ nav a {
         overflow: visible;
     }
 
+    .controls {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        margin-bottom: 15px;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    .control-block-a {
+
+        display: flex;
+        flex-direction: column;
+
+        height: 80%;
+
+        border-radius: 10px;    
+        padding: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        box-shadow: 0 0 0 2px #ffffff,
+        0.1em 0.1em 0.5em #6471717a;
+
+        background-color: #ffffff;
+    }
+
+    .control-block-b {
+
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        border-radius: 10px;    
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        box-shadow: 0 0 0 2px white,
+        0.1em 0.1em 0.5em #6471717a;
+
+        background-color: #ffffff;
+    }
+
+    .description_text {
+
+        padding-bottom: 1em;
+        text-align: left;
+        font-size: small;
+        color: #b1b1b1;
+    }
+
+    .control-block-a label {
+
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+
+    #amount {
+
+        padding: 8px;
+        width: fit-content;
+        font-size: 18px;
+        font-family: Segoe UI, sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .bankLabel {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 8px;
+        font-size: medium;
+    }
+
+    #bankSearch {
+
+        padding: 8px;
+        font-size: 15px;
+        font-family: Segoe UI, sans-serif;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 8px;
+    }
+
+    #bankSelector {
+
+        width: 100%;
+        padding: 0.1em;
+        border-radius: 0.3em;
+        border: 1px solid #ccc;
+        min-height: 100px;
+        font-size: 0.75em;
+        font-family: Segoe UI, sans-serif;
+    }
+
+    .periods {
+
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 15px;
+    }
+
     nav a{
 
-    display: none;
-
+        display: none;
     }
 
         .hamburger{
@@ -479,7 +698,7 @@ nav a {
 
 
 /* big mobile, tablet */
-@media screen and (min-width: 800px) and (max-width: 999px) {
+@media screen and (min-width: 800px) and (max-width: 1000px) {
     
     body {
         
@@ -556,7 +775,7 @@ nav a {
 
 
 /* laptop, desktop */
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
     body {
         
         padding-right: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
