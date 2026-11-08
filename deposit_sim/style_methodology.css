@@ -6,7 +6,9 @@ body {
     padding-top: 20px;
     font-family: Segoe UI, sans-serif;
     color: #1f2937;
-    font-size: larger;
+    font-size: large;
+    text-align: left;
+    text-justify: none;
     
     background: linear-gradient(rgba(194, 194, 194, 0.15), rgb(240, 243, 248));
 /*    background-image: url("Designer.png");
@@ -39,10 +41,78 @@ h2 {
     color: rgba(90, 99, 111, 0.53);
 }
 
+h3 {
+    
+    font-size: x-large;
+    margin-top: 1em;
+    margin-bottom: 1emm;
+}
+
 nav {
     position: relative;
 }
 
+/* main text */
+.methodheading {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    margin-top: 1em;
+    font-size: larger;
+    border-bottom: rgb(0, 0, 0) solid 0.08em;    
+}
+
+.method {
+    align-items: flex-start;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    display: block;
+    text-align: justify;
+    text-justify: auto;
+}
+
+
+.main_method {
+    margin-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 100%;
+    display: block;
+}
+
+.equation_1 {
+    align-items: flex-start;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+    display: block;
+    text-align: start;
+}
+
+.equation_2 {
+    align-items: flex-start;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+    display: block;
+    text-align: end;
+    text-justify: auto;
+}
+
+/* text */
+.text {
+    width: 100%;
+    height: 100%;
+}
+
+/* text spacing */
+.text p {
+    margin-bottom: .8em;
+}
 
 nav a {
 
@@ -69,137 +139,8 @@ nav a {
     display: none; /* CHANGE TO none/block to CLOSE/OPEN MENU DURING PREVIEW */
 }
 
-.controls {
 
-    display: grid;
-    grid-template-columns:
-        1fr
-        1fr
-        2fr;
-    gap: 15px;
-    
-    margin-bottom: 15px;
-    
-    padding: 3px;
-    border-radius: 10px;
-}
 
-.control-block-a {
-
-    display: flex;
-    flex-direction: column;
-    
-    height: 45%;
-
-    border-radius: 10px;    
-    padding: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    box-shadow: 0 0 0 2px #ffffff,
-    0.1em 0.1em 0.5em #6471717a;
-    
-    background-color: #ffffff;
-}
-
-.control-block-b {
-
-    display: flex;
-    flex-direction: column;
-    
-    border-radius: 10px;    
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    box-shadow: 0 0 0 2px white,
-    0.1em 0.1em 0.5em #6471717a;
-    
-    background-color: #ffffff;
-}
-
-.description_text {
-    
-    padding-bottom: 1em;
-    text-align: left;
-    font-size: small;
-    color: #b1b1b1;
-}
-
-.control-block-a label {
-
-    margin-bottom: 10px;
-    font-size: medium;
-}
-
-#amount {
-
-    padding: 8px;
-    font-size: 18px;
-    font-family: Segoe UI, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.bankLabel {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 8px;
-    font-size: medium;
-}
-
-#bankSearch {
-
-    padding: 8px;
-    font-size: 15px;
-    font-family: Segoe UI, sans-serif;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 8px;
-}
-
-#bankSelector {
-
-    width: 100%;
-    padding: 0.1em;
-    border-radius: 0.3em;
-    border: 1px solid #ccc;
-    min-height: 100px;
-    font-size: 0.75em;
-    font-family: Segoe UI, sans-serif;
-}
-
-.periods {
-
-    display: grid;
-    grid-template-columns: max-content max-content max-content;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 15px;
-}
-
-.chart-card {
-
-    margin-top: 20px;
-    border-radius: 10px;    
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    background-color: #ffffff;
-    
-    box-shadow: 0 0 0 2px white,
-    0.1em 0.1em 0.5em #6471717a;
-    height: 600px;
-}
-
-.update-date {
-
-    text-align: center;
-    margin-top: 20px;
-    color: rgba(31, 41, 55, 0.50);
-}
 /*D8D8D8*/
 .footer {
     position: fixed;
@@ -216,76 +157,6 @@ nav a {
     font-size: 18px;
 }
 
-#selectedBanks {
-
-    display: flex;
-    gap: 5px;
-    margin-bottom: px;
-}
-
-.chip {
-
-    display: inline-block;
-    background: #00000059;
-    color: #ffffff;
-    font-size: small;
-    padding: 1% 4%;
-    border-radius: 10px;
-    margin-right: 1%;
-    margin-bottom: 2%;
-    
-    box-shadow: 0 0 0 1px white,
-    0.1em 0.1em 0.5em #6471717a;
-
-}
-
-.infoIcon {
-
-    position: relative;
-    width: 1em;
-    height: 1em;
-    border-radius: 75%;
-    background: #9c00ffff;
-    color: #ffffff;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75em;
-    font-weight: b;
-    cursor: pointer;
-    overflow: visible;
-}
-
-.tooltipText {
-
-    display: none;
-    position: absolute;
-    top: 26px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 220px;
-    padding: 10px;
-    background: white;
-    color: #707070;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: normal;
-    line-height: 1.4;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 9999;
-    white-space: normal;
-    box-sizing: border-box;
-    font-variant: none;
-}
-
-.infoIcon:hover .tooltipText {
-
-    display: block;
-
-}
-
 
 
 /* mobile */
@@ -295,129 +166,6 @@ nav a {
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
-
-    .infoIcon {
-
-        position: relative;
-        width: 1em;
-        height: 1em;
-        border-radius: 75%;
-        background: #1700ffff;
-        color: #ffffff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.75em;
-        font-weight: b;
-        cursor: pointer;
-        overflow: visible;
-    }
-    
-    .controls {
-
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1em;
-        margin-bottom: 15px;
-        padding: 3px;
-        border-radius: 10px;
-    }
-
-    .control-block-a {
-
-        display: flex;
-        flex-direction: column;
-
-        height: 80%;
-
-        border-radius: 10px;    
-        padding: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        box-shadow: 0 0 0 2px #ffffff,
-        0.1em 0.1em 0.5em #6471717a;
-
-        background-color: #ffffff;
-    }
-
-    .control-block-b {
-
-        display: flex;
-        flex-direction: column;
-
-        border-radius: 10px;    
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        box-shadow: 0 0 0 2px white,
-        0.1em 0.1em 0.5em #6471717a;
-
-        background-color: #ffffff;
-    }
-
-    .description_text {
-
-        padding-bottom: 1em;
-        text-align: left;
-        font-size: small;
-        color: #b1b1b1;
-    }
-
-    .control-block-a label {
-
-        margin-bottom: 10px;
-        font-size: medium;
-    }
-
-    #amount {
-
-        padding: 8px;
-        width: fit-content;
-        font-size: 18px;
-        font-family: Segoe UI, sans-serif;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-
-    .bankLabel {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-bottom: 8px;
-        font-size: medium;
-    }
-
-    #bankSearch {
-
-        padding: 8px;
-        font-size: 15px;
-        font-family: Segoe UI, sans-serif;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 8px;
-    }
-
-    #bankSelector {
-
-        width: 100%;
-        padding: 0.1em;
-        border-radius: 0.3em;
-        border: 1px solid #ccc;
-        min-height: 100px;
-        font-size: 0.75em;
-        font-family: Segoe UI, sans-serif;
-    }
-
-    .periods {
-
-        display: grid;
-        grid-template-columns: max-content max-content max-content;
-        flex-wrap: wrap;
-        gap: 8px;
-        font-size: 15px;
-    }    
 
     nav a{
 
@@ -490,6 +238,7 @@ nav a {
 }
 
 
+
 /* big mobile, tablet */
 @media screen and (min-width: 600px) and (max-width: 800px) {
     
@@ -497,133 +246,6 @@ nav a {
         
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
-    }
-
-    
-    
-    .infoIcon {
-
-        position: relative;
-        width: 1em;
-        height: 1em;
-        border-radius: 75%;
-        background: #ff00caff;
-        color: #ffffff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.75em;
-        font-weight: b;
-        cursor: pointer;
-        overflow: visible;
-    }
-
-    .controls {
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;
-        margin-bottom: 15px;
-        padding: 3px;
-        border-radius: 10px;
-    }
-
-    .control-block-a {
-
-        display: flex;
-        flex-direction: column;
-
-        height: 80%;
-
-        border-radius: 10px;    
-        padding: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        box-shadow: 0 0 0 2px #ffffff,
-        0.1em 0.1em 0.5em #6471717a;
-
-        background-color: #ffffff;
-    }
-
-    .control-block-b {
-
-        display: flex;
-        flex-direction: column;
-        grid-column-start: 1;
-        grid-column-end: 3;
-
-        border-radius: 10px;    
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        box-shadow: 0 0 0 2px white,
-        0.1em 0.1em 0.5em #6471717a;
-
-        background-color: #ffffff;
-    }
-
-    .description_text {
-
-        padding-bottom: 1em;
-        text-align: left;
-        font-size: small;
-        color: #b1b1b1;
-    }
-
-    .control-block-a label {
-
-        margin-bottom: 10px;
-        font-size: medium;
-    }
-
-    #amount {
-
-        padding: 8px;
-        width: fit-content;
-        font-size: 18px;
-        font-family: Segoe UI, sans-serif;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-
-    .bankLabel {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-bottom: 8px;
-        font-size: medium;
-    }
-
-    #bankSearch {
-
-        padding: 8px;
-        font-size: 15px;
-        font-family: Segoe UI, sans-serif;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 8px;
-    }
-
-    #bankSelector {
-
-        width: 100%;
-        padding: 0.1em;
-        border-radius: 0.3em;
-        border: 1px solid #ccc;
-        min-height: 100px;
-        font-size: 0.75em;
-        font-family: Segoe UI, sans-serif;
-    }
-
-    .periods {
-
-        display: grid;
-        grid-template-columns: max-content max-content max-content;
-        flex-wrap: wrap;
-        gap: 8px;
-        font-size: 15px;
     }
 
     nav a{
@@ -705,51 +327,6 @@ nav a {
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
-
-    .infoIcon {
-
-        position: relative;
-        width: 1em;
-        height: 1em;
-        border-radius: 75%;
-        background: #48833e7a;
-        color: #ffffff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.75em;
-        font-weight: b;
-        cursor: pointer;
-        overflow: visible;
-    }
-    
-    .control-block-a {
-
-        display: flex;
-        flex-direction: column;
-
-        height: 65%;
-
-        border-radius: 10px;    
-        padding: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        box-shadow: 0 0 0 2px #ffffff,
-        0.1em 0.1em 0.5em #6471717a;
-
-        background-color: #ffffff;
-    }
-
-    .periods {
-
-        display: grid;
-        grid-template-columns: max-content max-content;
-        flex-wrap: wrap;
-        gap: 8px;
-        column-gap: 2vw;
-        font-size: 18px;
-    }
     
     nav a {
 
@@ -781,49 +358,5 @@ nav a {
         padding-right: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
-   
-    .infoIcon {
-
-        position: relative;
-        width: 1em;
-        height: 1em;
-        border-radius: 75%;
-        background: #ff0000ff;
-        color: #ffffff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.75em;
-        font-weight: b;
-        cursor: pointer;
-        overflow: visible;
-    }    
+    
 }
-
-
-
-/* laptop, desktop 
-@media screen and (min-width: 1200px) {
-    body {
-        
-        padding-right: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
-        padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
-    }
-  
-    .infoIcon {
-
-        position: relative;
-        width: 1em;
-        height: 1em;
-        border-radius: 75%;
-        background: #9c00ffff;
-        color: #ffffff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.75em;
-        font-weight: b;
-        cursor: pointer;
-        overflow: visible;
-    }    
-}*/

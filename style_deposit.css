@@ -102,6 +102,12 @@ nav a {
     background-color: #ffffff;
 }
 
+/* projects images */
+.control-block-a img {
+    width: auto;
+    margin-top: 0;
+}
+
 .control-block-b {
 
     display: flex;
@@ -472,8 +478,8 @@ nav a {
             border-top-left-radius: 2px;
             border-bottom-right-radius: 2px;
             border-top-right-radius: 2px;
-            background: rgba(13, 13, 13, 0.33);
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.93),
+            background: rgba(13, 13, 13, 0.40);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.10),
             1em 1em 5em #6471717a;        
         }
 
@@ -679,8 +685,8 @@ nav a {
             border-top-left-radius: 2px;
             border-bottom-right-radius: 2px;
             border-top-right-radius: 2px;
-            background: rgba(13, 13, 13, 0.33);
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.93),
+            background: rgba(13, 13, 13, 0.40);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.10),
             1em 1em 5em #6471717a;        
         }
 

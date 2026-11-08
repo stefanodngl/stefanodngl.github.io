@@ -14,274 +14,314 @@
     <link
         rel="stylesheet"
         href="style_methodology.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
+  </script>
     
 </head>
 
 <body>
 
-<header>
+    <header>
 
-    <h1>Italian bank deposit</h1>
+        <h1>Italian bank deposit</h1>
 
-<nav>
+    <nav>
 
-    <div class="hamburger" id="hamburgerBtn">
+        <div class="hamburger" id="hamburgerBtn">
 
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </div>
-
-    <div class="mobileMenu" id="mobileMenu">
-
-        <a href="https://stefanodngl.github.io/deposit_sim.html" target="_blank">
-            simulator
-        </a>
-
-        <a href="how_to_use.html" target="_blank">
-            how to use
-        </a>
-
-        <a href="https://stefanodngl.github.io/index.html" target="_blank">
-            about
-        </a>
-
-    </div>
-
-    <a href="https://stefanodngl.github.io/deposit_sim.html" target="_blank">
-        simulator
-    </a>
-
-    <a href="https://stefanodngl.github.io" target="_blank">
-        how to use
-    </a>
-
-    <a href="https://stefanodngl.github.io/index.html" target="_blank">
-        about
-    </a>
-
-</nav>
-    
-
-</header>
-
-<h2>Compare Italian bank deposit accounts and returns</h2>
-    
-<main>
-
-    <section class="controls">
-
-        <div class="control-block-a">
-
-            <label>
-                <a>Deposit amount (in EUR)</a>
-            </label>
-
-            <input
-                type="number"
-                id="amount"
-                value="50000">
+            <span></span>
+            <span></span>
+            <span></span>
 
         </div>
+
+        <div class="mobileMenu" id="mobileMenu">
+
+            <a href="https://stefanodngl.github.io/deposit_sim.html" target="_blank">
+                simulator
+            </a>
+
+            <a href="https://stefanodngl.github.io/deposit_sim/how_to_use.html" target="_blank">
+                how to use
+            </a>
+
+            <a href="https://stefanodngl.github.io/index.html" target="_blank">
+                about
+            </a>
+
+        </div>
+
+            <a href="https://stefanodngl.github.io/deposit_sim.html" target="_blank">
+                simulator
+            </a>
+
+            <a href="https://stefanodngl.github.io/deposit_sim/how_to_use.html" target="_blank">
+                how to use
+            </a>
+
+            <a href="https://stefanodngl.github.io/index.html" target="_blank">
+                about
+            </a>
+
+    </nav>
+
+    </header>
+
+    <h2>Compare Italian bank deposit accounts and returns</h2>
+
+    <main>
+        
+    <h3>Methodology</h3>
+        
+        <a>
+            The following page is dedicated to explaining the characteristics of the simulator related to 
+            its construction, the data gathered and the calculation to produce the results.
+        </a>
     
-        <div class="control-block-a">
 
-            <label>
-                <a>Periods (months)</a>
-            </label>
+        <div class="main_method">
 
-            <div class="periods">
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="6"
-                        checked>
-                    6 
-                </label>
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="12"
-                        checked>
-                    12
-                </label>
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="24"
-                        checked>
-                    24
-                </label>
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="36"
-                        checked>
-                    36
-                </label>
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="48"
-                        checked>
-                    48
-                </label>
-
-                <label>
-                    <input
-                        class="period-checkbox"
-                        type="checkbox"
-                        value="60"
-                        checked>
-                    60
-                </label>
+            <div class="methodheading">
+            
+                <a>Bank list</a>
 
             </div>
 
-        </div>
+            <div class="method">
 
-        <div class="control-block-b">
+                <a>
+                    The list of all banks operating in Italy has been retrieved from the lists of banks of 
+                    the <span style="color:#2e2e94;text-decoration: underline;" href="https://infostat.bancaditalia.it/GIAVAInquiry-public/ng/banche" target="blank">Bank of Italy</span> 
+                    and the <span style="color:#2e2e94;text-decoration: underline;" href="https://www.bde.es/webbe/en/estadisticas/otras-clasificaciones/clasificacion-entidades/listas-instituciones-financieras/listas-instituciones-financieras-monetarias-pais/lista-mfi-it.html" target="blank">Bank of Spain</span>. 
+                    For each bank listed in the dataset, the research extracted data from the information sheet 
+                    (in Italian, “<i>Foglio informativo</i>”) of the corresponding product. Banks operating in Italy are 
+                    subject to the publication of clear and transparent information related to each product offered 
+                    following the Consolidated Law on Banking (in Italian, “<i>Testo Unico Bancario</i>” – <span style="color:#2e2e94;text-decoration: underline;" href="https://www.bancaditalia.it/compiti/vigilanza/normativa/index.html?com.dotmarketing.htmlpage.language=1" target="blank">Legislative Decree 
+                    385/1993</span> and following).
+                </a>
 
-            <div class="bankLabel">
+            </div>    
 
-                <span>
-                    <a>Search bank</a>
-                </span>
-
-                <div class="infoIcon">
-
-                    i
-
-                    <div class="tooltipText">
-                        To select multiple banks, hold Ctrl and click on the relative name (max 5 displayed)
-                    </div>
-
-                </div>
-
-            </div>
-
-            <input
-                type="text"
-                id="bankSearch"
-                placeholder="Enter bank name...">
-
-
-            <select
-                id="bankSelector"
-                multiple
-                size="8">
-            </select>
-
-        </div>
+            <div class="methodheading">
                 
+                <a>Products and time periods</a>
+                
+            </div>
 
-    </section>
+            <div class="method">
+                
+                <a>
+                    The product included in the datasheet refers to deposit account only (in Italian, “<i>Conto deposito</i>” 
+                    or “<i>Deposito bancario vincolato</i>”). The product included in the datasheet refers to deposits having 
+                    fixed interest rates with 3-, 6-, 9-, 12-, 18-, 30-, 36-, 48-, and 60-month investment periods,
+                    being the most commonly offered time period for deposit accounts.
+                </a>
+                
+            </div>
+            
+            <div class="methodheading">
+                
+                <a>Terms update</a>
+                
+            </div>
 
-    <div id="selectedBanks"></div>
+            <div class="method">
+                
+                <a>
+                    When gathering data related to interest rates, the datasheet reports the most recent data
+                    available on the product terms.
+                </a>
+                
+            </div>  
 
-    <section class="chart-card">
+            <div class="methodheading">
+                
+                <a>Multiple deposit products</a>
+                
+            </div>
+            
+            <div class="method">
+                
+                <a>
+                    When a bank offers similar deposit account products, the datasheet reports data on the product 
+                    with least expensive conditions (opening, closing, commissions) or with the highest interest rate 
+                    offered. To make a fair comparison between standard deposit products, the datasheet does not 
+                    include temporal offers (e.g. higher interest rates for limited time periods) or products with 
+                    limiting conditions (e.g. products available to associates only, in case of cooperative banks).
+                </a>
+                
+            </div>
 
-        <canvas id="yieldChart"></canvas>
+            <div class="methodheading">
+                
+                <a>Chart display</a>
+                
+            </div>
+            
+            <div class="method">
+                
+                <a>
+                    The graph displays the results related to the following investment periods: 6 months, 1 year, 
+                    2 years, 3 years, 4 years, and 5 years.
+                </a>
+                
+            </div>
 
-    </section>
+            <div class="methodheading">
+                
+                <a>Calculation</a>
+                
+            </div>
+            
+            <div class="method">
+                
+                <a>
+                    To calculate the net interest of the deposit account the simulator uses the following equation:<br>
+                    
+                    <div class="equation_1">
+                        \((C*i) * ({l \over 12})\)
+                    </div>
+                    <div class="equation_2">
+                        \(- [(C*i) * ({l \over 12}) * 0.26] \)
+                    </div>                    
+                    <div class="equation_2">
+                        \(- (C*s)* ({l \over 12}) \)
+                    </div>
+                    
+                    where \(C\) is the amount invested, \(i\) is the gross annual interest rate, \(l\) is the deposit 
+                    period in months, and \(s\) is the stamp tax which is equal to 0,2% when paid by the client, or 0 when paid by 
+                    the bank.
+                </a>
+                
+            </div>
+            
+            <div class="methodheading">
+                
+                <a>Taxes</a>
+                
+            </div>
+            
+            <div class="method">
+                
+                <a>
+                    The Italian taxation system imposes two different taxes on deposit accounts. The first one is 
+                    the capital gains tax, which amounts to 26% of the gross profit from the investment. This tax 
+                    is deducted and collected directly by the bank when paying interests to the investor.
+                    The second tax is the stamp tax (in Italian, “<i>imposta di bollo</i>”), which amounts to 0,20% of the 
+                    total amount invested per year. The tax is commonly paid directly to the bank at the beginning or
+                    at the end of the investment period, unless stated otherwise on the information sheet of the 
+                    product. To date, only 5 banks offer to pay the stamp tax on behalf of the investor.
+                </a>
+                
+            </div>
+            
+                        <div class="methodheading">
+                
+                <a>Additional costs</a>
+                
+            </div>
+            
+            <div class="method">
+                
+                <a>
+                    The majority of the deposit account offered by banks operating in Italy does not entail any 
+                    cost connected to the deposit account. However, some banks charge additional costs for deposit 
+                    accounts, mainly related to the opening, management and closing of the deposit account. The 
+                    opening cost (in Italian, “<i>spese di apertura/accensione vincolo</i>”) refers to a fixed amount 
+                    charged at the moment of opening the deposit account. The management cost (in Italian, “<i>spese 
+                    di tenuta conto/conto</i>”) refers to a fixed amount charged yearly for the management of the 
+                    deposit account. 
+                    Lastly, the closing cost (in Italian, “<i>spese di chiusura/estinzione vincolo</i>”) refers to a 
+                    fixed amount charged at the moment of closing the deposit account. In addition, no bank currently 
+                    charges any commission (in Italian, “<i>commissioni</i>”) on the deposit account. Since the vast 
+                    majority of banks do not apply any additional costs related to deposit account and in order to 
+                    avoid too complex calculations given by the different nature of additional costs (e.g. costs of 
+                    bank statement, additional charges), the net interest calculated by the simulator does not include 
+                    additional costs in the computation.
+                </a>
+                
+            </div>
+            
+        </div>
 
-    <div class="update-date">
+    </main>
 
-        Deposit rates last update: 10/05/2026
+    <div class=footer>
+
+        2026 &#xA9; Stefano D'Angelo
 
     </div>
 
-</main>
+    <script>
 
-<div class=footer>
+    document.addEventListener(
+        "DOMContentLoaded",
+        function(){
 
-    2026 &#xA9; Stefano D'Angelo
+            document
+            .getElementById("mobileMenu")
+            .classList
+            .remove("mobileMenuOpen");
 
-</div>
-    
-<script>
+            document
+            .getElementById("hamburgerBtn")
+            .addEventListener(
+                "click",
+                function(event){
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+                    event.stopPropagation();
 
-        document
-        .getElementById("mobileMenu")
-        .classList
-        .remove("mobileMenuOpen");
-
-        document
-        .getElementById("hamburgerBtn")
-        .addEventListener(
-            "click",
-            function(event){
-
-                event.stopPropagation();
-
-                document
-                .getElementById("mobileMenu")
-                .classList
-                .toggle("mobileMenuOpen");
-
-            }
-        );
-
-        document.addEventListener(
-            "click",
-            function(event){
-
-                const menu =
-                    document.getElementById(
-                        "mobileMenu"
-                    );
-
-                const button =
-                    document.getElementById(
-                        "hamburgerBtn"
-                    );
-
-                if(
-
-                    !menu.contains(
-                        event.target
-                    )
-
-                    &&
-
-                    !button.contains(
-                        event.target
-                    )
-
-                ){
-
-                    menu.classList.remove(
-                        "mobileMenuOpen"
-                    );
+                    document
+                    .getElementById("mobileMenu")
+                    .classList
+                    .toggle("mobileMenuOpen");
 
                 }
+            );
 
-            }
-        );
+            document.addEventListener(
+                "click",
+                function(event){
 
-    }
-);
+                    const menu =
+                        document.getElementById(
+                            "mobileMenu"
+                        );
 
-</script>
+                    const button =
+                        document.getElementById(
+                            "hamburgerBtn"
+                        );
 
-<script src="app.js"></script>
+                    if(
+
+                        !menu.contains(
+                            event.target
+                        )
+
+                        &&
+
+                        !button.contains(
+                            event.target
+                        )
+
+                    ){
+
+                        menu.classList.remove(
+                            "mobileMenuOpen"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+    </script>
 
 </body>
 
