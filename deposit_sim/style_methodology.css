@@ -94,20 +94,18 @@ nav {
     align-items: flex-start;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
-    margin-right: 0.4em;
-    margin-left: 23vw;
+    margin-right: 50%;
     display: block;
-    text-align: start;
+    text-align: end;
 }
 
 .equation_2 {
     align-items: flex-start;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
-    margin-right: 23vw;
-    margin-left: 0.4em;
+    margin-left: 50%;
     display: block;
-    text-align: end;
+    text-align: start;
     text-justify: auto;
 }
 
@@ -173,13 +171,34 @@ nav a {
         
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
+        
+        font-size: smaller;
     }
 
     nav a{
 
-    display:none;
-}
+        display:none;
+    }
+    
+    .equation_1 {
+        align-items: flex-start;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        margin-right: 50%;
+        display: block;
+        text-align: start;
+    }
 
+    .equation_2 {
+        align-items: flex-start;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        margin-left: 20%;
+        display: block;
+        text-align: end;
+        text-justify: auto;
+    }
+    
     .hamburger{
 
         display: flex;
@@ -193,7 +212,7 @@ nav a {
     .hamburger span{
 
         width: 100%;
-        height: 1.5px;
+        height: 2px;
         background: #aa88f5;
         border-radius: 999px;
         box-shadow:
@@ -239,10 +258,10 @@ nav a {
         }
     
     .footer {
-    height: 40px;
-    font-size: 18px;
-    font-family: Helvetica, "Arial", sans-serif;    
-}
+        height: 40px;
+        font-size: 18px;
+        font-family: Helvetica, "Arial", sans-serif;    
+    }
 }
 
 
@@ -256,27 +275,6 @@ nav a {
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
 
-.equation_1 {
-    align-items: flex-start;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    margin-right: 0.4em;
-    margin-left: 9.5vw;
-    display: block;
-    text-align: start;
-}
-
-.equation_2 {
-    align-items: flex-start;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    margin-right: 9.5vw;
-    margin-left: 0.4em;
-    display: block;
-    text-align: end;
-    text-justify: auto;
-}
-    
     nav a{
 
         display: none;
@@ -356,28 +354,7 @@ nav a {
         padding-right: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
         padding-left: calc(15px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
-    
-.equation_1 {
-    align-items: flex-start;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    margin-right: 0.4em;
-    margin-left: 19vw;
-    display: block;
-    text-align: start;
-}
 
-.equation_2 {
-    align-items: flex-start;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    margin-right: 19vw;
-    margin-left: 0.4em;
-    display: block;
-    text-align: end;
-    text-justify: auto;
-}
-    
     nav a {
 
         display: inline-block; 
@@ -409,25 +386,5 @@ nav a {
         padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
      
-    .equation_1 {
-        align-items: flex-start;
-        margin-top: 0.8em;
-        margin-bottom: 0.8em;
-        margin-right: 0.4em;
-        margin-left: 20vw;
-        display: block;
-        text-align: start;
-    }
-
-    .equation_2 {
-        align-items: flex-start;
-        margin-top: 0.8em;
-        margin-bottom: 0.8em;
-        margin-right: 20vw;
-        margin-left: 0.4em;
-        display: block;
-        text-align: end;
-        text-justify: auto;
-    }
     
 }
