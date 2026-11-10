@@ -73,6 +73,14 @@ nav {
     text-justify: auto;
 }
 
+.method p {
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    text-align: justify;
+    text-justify: auto;
+}
 
 .main_method {
     margin-top: 1em;
