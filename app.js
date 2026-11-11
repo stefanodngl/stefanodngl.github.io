@@ -301,25 +301,34 @@ function updateChart() {
         60
     ];
 
-    const selectedPeriods =
+const selectedPeriods =
 
-        Array
-        .from(
+    Array
+    .from(
 
-            document.querySelectorAll(
-                ".period-checkbox.active-period"
-            )
-
+        document.querySelectorAll(
+            ".period-checkbox.active-period"
         )
 
-        .map(
+    )
 
-            button =>
-            Number(
-                button.value
-            )
+    .map(function(button){
 
+        return Number(
+            button.value
         );
+
+    });
+
+    if(selectedPeriods.length === 0){
+
+        if(chart){
+            chart.destroy();
+        }
+
+        return;
+
+    }
 
     const selectedBanks =
 
