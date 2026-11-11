@@ -89,7 +89,7 @@ nav a {
     display: flex;
     flex-direction: column;
     
-    height: 45%;
+    height: 55%;
 
     border-radius: 10px;    
     padding: 15px;
@@ -181,34 +181,46 @@ nav a {
     display: grid;
     grid-template-columns: max-content max-content max-content;
     flex-wrap: wrap;
-    row-gap: 0.5em;
-    column-gap: 1em;
+    row-gap: 0.9em;
+    column-gap: 1.5em;
     font-size: 15px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .periods input {
     
     background-color: #efededfb;
     color: #1f2937;
-    border-radius: 45%;
+    border-radius: 100%;
     border: none;
     font-family: Segoe UI, sans-serif;
-    padding: 0.25em;
-    width: 100%;
+    padding: 0;
+    width: 200%;
+    height: 150%;
     transition-duration: 0.4s;
     cursor: pointer;
     box-shadow: 0 0 0 1px #d1d1d1,
         0 0 0.5em #6471717a;
 }
 
-.periods input:hover {
+.periods input:hover:not(.active-period) {
     
     border-radius: 45%;
     border: none;
-    padding: 0.25em;
+    padding: 0;
     background-color: rgba(170, 136, 245, 0.60);
     color: #ffffff;
   }
+
+.period-checkbox.active-period {
+
+    background-color:
+        rgba(170, 136, 245, 0.60);
+    color:
+        #ffffff;
+
+}
 
 .chart-card {
 
@@ -431,7 +443,7 @@ nav a {
         grid-template-columns: max-content max-content max-content;
         flex-wrap: wrap;
         row-gap: 0.5em;
-        column-gap: 1em;
+        column-gap: 1.8em;
         font-size: 15px;
     }    
 
@@ -619,8 +631,8 @@ nav a {
         display: grid;
         grid-template-columns: max-content max-content max-content;
         flex-wrap: wrap;
-        row-gap: 0.5em;
-        column-gap: 1em;
+        row-gap: 1em;
+        column-gap: 2em;
         font-size: 15px;
     }
 
@@ -709,7 +721,7 @@ nav a {
         display: flex;
         flex-direction: column;
 
-        height: 65%;
+        height: 70%;
 
         border-radius: 10px;    
         padding: 15px;
@@ -728,7 +740,8 @@ nav a {
         grid-template-columns: max-content max-content;
         flex-wrap: wrap;
         gap: 8px;
-        column-gap: 2vw;
+        row-gap: 0.6em;
+        column-gap: 1.5em;
         font-size: 18px;
     }
     
@@ -748,9 +761,9 @@ nav a {
     }
      
     .footer {
-    height: 40px;
-    font-size: 18px;
-}
+        height: 40px;
+        font-size: 18px;
+    }
 }
 
 
@@ -763,7 +776,6 @@ nav a {
         padding-left: calc(50px + (200vw - 700px) * (15 - 30) / (700 -  1000));
     }
 
-    
 }
 
 

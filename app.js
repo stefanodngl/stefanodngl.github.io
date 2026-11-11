@@ -307,16 +307,16 @@ function updateChart() {
         .from(
 
             document.querySelectorAll(
-                ".period-checkbox:checked"
+                ".period-checkbox.active-period"
             )
 
         )
 
         .map(
 
-            checkbox =>
+            button =>
             Number(
-                checkbox.value
+                button.value
             )
 
         );
@@ -624,6 +624,34 @@ document
         }
 
         updateChart();
+
+    }
+);
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        document
+        .querySelectorAll(
+            ".period-checkbox"
+        )
+        .forEach(function(button){
+
+            button.addEventListener(
+                "click",
+                function(){
+
+                    this.classList.toggle(
+                        "active-period"
+                    );
+
+                    updateChart();
+
+                }
+            );
+
+        });
 
     }
 );
